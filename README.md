@@ -39,7 +39,7 @@ resource "aws_key_pair" "this" {
 }
 
 module "validator_node" {
-  source = "git::https://github.com/solanium-io/aws-solana-validator.git?v1.0.0"
+  source = "github.com/solanium-io/aws-solana-validator?ref=v1.0.0"
 
   # meta
   environment = "dev"
@@ -49,6 +49,10 @@ module "validator_node" {
   vpc_id    = module.vpc.vpc_id
   subnet_id = module.vpc.public_subnets[1]
 
+  # security
+  whitelist_ips = var.whitelist_ips
+  enable_ssh    = false
+  
   # machine
   ami           = "ami-0a8e758f5e873d1c1" # ubuntu 20.04
   instance_type = "m5ad.8xlarge"
