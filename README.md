@@ -63,14 +63,16 @@ module "validator_node" {
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.15 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 3.38.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.38.0 |
 
 ## Modules
 
@@ -80,20 +82,18 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_iam_instance_profile.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_instance_profile) | resource |
-| [aws_iam_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment) | resource |
-| [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_instance.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
-| [aws_key_pair.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
-| [aws_kms_alias.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
-| [aws_kms_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
-| [aws_security_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
-| [tls_private_key.this](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
-| [aws_ami.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_caller_identity.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
-| [aws_iam_policy_document.assume_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_policy_document.kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_region.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+| [aws_iam_instance_profile.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/iam_instance_profile) | resource |
+| [aws_iam_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/iam_policy_attachment) | resource |
+| [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/iam_role) | resource |
+| [aws_instance.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/instance) | resource |
+| [aws_kms_alias.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/kms_alias) | resource |
+| [aws_kms_key.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/kms_key) | resource |
+| [aws_security_group.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/resources/security_group) | resource |
+| [aws_ami.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/data-sources/ami) | data source |
+| [aws_caller_identity.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/data-sources/caller_identity) | data source |
+| [aws_iam_policy_document.assume_role](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/data-sources/iam_policy_document) | data source |
+| [aws_iam_policy_document.kms](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/data-sources/iam_policy_document) | data source |
+| [aws_region.this](https://registry.terraform.io/providers/hashicorp/aws/3.38.0/docs/data-sources/region) | data source |
 
 ## Inputs
 
