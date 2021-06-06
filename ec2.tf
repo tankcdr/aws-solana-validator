@@ -8,23 +8,13 @@ data "aws_ami" "this" {
   }
 }
 
-resource "tls_private_key" "this" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
-}
-
-resource "aws_key_pair" "this" {
-  key_name   = format("%s-key", var.name)
-  public_key = tls_private_key.this.public_key_openssh
-}
-
 resource "aws_instance" "this" {
   ami                    = var.ami == "" ? data.aws_ami.this.image_id : var.ami
   instance_type          = var.instance_type
   subnet_id              = var.subnet_id
   tags                   = var.tags
   iam_instance_profile   = aws_iam_instance_profile.this.name
-  key_name               = aws_key_pair.this.key_name
+  key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.this.id]
   user_data              = file(format("%s/files/user-data.sh", path.module))
   ebs_optimized          = true
